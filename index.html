@@ -9,6 +9,7 @@
         <link rel="icon" href="assets/collapsing_stars_straigth_rounded.png">
     </head>
     <body>
+        <img src="assets/sun.png" id="icon">
         <div class="title">Articles.</div>
         <div class="gallery">
             <div class="content">
@@ -62,5 +63,11 @@
                 <button>View</button>
             </div>
         </div>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick = function() {
+                document.body.classList.toggle("dark-theme");
+            }
+        </script>
     </body>
 </html>
