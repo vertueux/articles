@@ -40,11 +40,15 @@ body::-webkit-scrollbar-thumb {
     --second-color: #f2f2f2;
     --content-box-shadow-color: 0 14px 28px rgba(90, 90, 90, 0.25),
     0 10px 10px rgba(90, 90, 90, 0.22);
-    --content-hover-box-shadow-color: 0 3px 6px rgba(90, 90, 90, 0.16), /*82*/
+    --content-hover-box-shadow-color: 0 3px 6px rgba(90, 90, 90, 0.16), 
     0 3px 6px rgba(90, 90, 90, 0.23); 
-    img {
-        -webkit-filter: grayscale(1) invert(1);
-        filter: grayscale(1) invert(1);
+
+    #icon {
+        content: url(assets/sun-white.png);
+    }
+
+    #doc {
+        content: url(assets/document-white.png);
     }
 }
 
