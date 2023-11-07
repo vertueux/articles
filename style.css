@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb {
     0 3px 6px rgba(90, 90, 90, 0.23); 
 
     #icon {
-        content: url(assets/sun-white.png);
+        content: url(assets/moon.png);
     }
 
     #doc {
@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     #icon {
-        content: url(assets/sun-white.png);
+        content: url(assets/moon.png);
     }
 
     #doc {
@@ -88,7 +88,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     #icon {
-        content: url(assets/sun-white.png);
+        content: url(assets/moon.png);
     }
 
     #doc {
@@ -235,7 +235,7 @@ button {
     background-color: transparent;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .content {
         width: 45%;
     }
