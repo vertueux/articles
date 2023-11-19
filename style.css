@@ -21,22 +21,6 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 */
-ul {
-    position: fixed;
-    height: 100px;
-    filter: brightness(65%);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    width: 400px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45vh);
-    z-index: 100;
-}
 
 body::-webkit-scrollbar {
     width: 12px;                                                                                         
@@ -96,7 +80,7 @@ body {
 } */
 
 .title {
-    padding-top: 25vh;
+    padding-top: 13vh;
     text-align: left;
     align-items: left;
     font-size: 80px;
