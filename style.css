@@ -7,6 +7,37 @@
     font-stretch: 75% 125%;
 }
 
+/*ul {
+    position: fixed;
+    width: 900px;
+    height: 100px;
+    margin: 50px auto;
+    filter: brightness(90%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+*/
+ul {
+    position: fixed;
+    height: 100px;
+    filter: brightness(65%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45vh);
+    z-index: 100;
+}
+
 body::-webkit-scrollbar {
     width: 12px;                                                                                         
 }
@@ -35,61 +66,6 @@ body::-webkit-scrollbar-thumb {
     0 3px 6px rgba(0, 0, 0, 0.23); 
 }
 
-.dark-theme {
-    --primary-color: black;
-    --second-color: #f2f2f2;
-    --content-box-shadow-color: 0 14px 28px rgba(90, 90, 90, 0.25),
-    0 10px 10px rgba(90, 90, 90, 0.22);
-    --content-hover-box-shadow-color: 0 3px 6px rgba(90, 90, 90, 0.16), 
-    0 3px 6px rgba(90, 90, 90, 0.23); 
-
-    #doc {
-        content: url(assets/blue_folder.png);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: rgb(8, 8, 8);
-        --second-color: #f2f2f2;
-        --content-box-shadow-color: 0 14px 28px rgba(90, 90, 90, 0.25),
-        0 10px 10px rgba(90, 90, 90, 0.22);
-        --content-hover-box-shadow-color: 0 3px 6px rgba(90, 90, 90, 0.16), 
-        0 3px 6px rgba(90, 90, 90, 0.23); 
-    }
-
-    #doc {
-        content: url(assets/blue_folder.png);
-    }
-
-    .dark-theme { /* Modifying the dark theme to white theme if the prefered color scheme is dark already. */
-        --primary-color: #f2f2f2;
-        --second-color: black;
-        --content-box-shadow-color: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-        --content-hover-box-shadow-color: 0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23); 
-        #doc {
-            content: url(assets/blue_folder.png);
-        }
-    }
-
-    #doc {
-        content: url(assets/blue_folder.png);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --primary-color: #f2f2f2;
-        --second-color: black;
-        --content-box-shadow-color: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-        --content-hover-box-shadow-color: 0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23); 
-    }
-}
-
 html {
     font-family: 'Hubot Sans';
     -webkit-user-select: none;
@@ -102,11 +78,12 @@ html {
 
 body {
     margin: 0;
-    background: var(--primary-color);
+    /*background: var(--primary-color);*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
+    background: linear-gradient(217deg, rgba(255, 255, 255, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(224, 236, 255, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(217, 241, 255, 0.8), rgba(0,0,255,0) 70.71%);
 
     /* Scrollbar. */
     overflow-x: hidden; 
@@ -119,7 +96,7 @@ body {
 } */
 
 .title {
-    padding-top: 10vh;
+    padding-top: 25vh;
     text-align: left;
     align-items: left;
     font-size: 80px;
@@ -135,7 +112,7 @@ body {
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 25px;
-    background-color: #5b5b5b;
+    background-color: #000000;
 }
 
 h3 {
@@ -148,7 +125,6 @@ h3 {
 a {
     text-decoration: none;
     display: inline-block;
-    position: relative;
     z-index: 1;
     padding: 0.5em 8em; 
     margin: -0.5em -8em;
@@ -174,9 +150,9 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: left;
-    align-items: left;
-    margin: 80px 3vw;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0;
 }
 
 .content {
@@ -193,6 +169,8 @@ a:visited {
     transition: .4s;
     background: var(--primary-color);
     color: var(--second-color);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
 }
 
 .content:hover {
@@ -208,9 +186,17 @@ img {
     display: block;
 }
 
+.title a img {
+    position: absolute;
+    right:2vw;
+    margin-top: -70px;
+    width:100px;
+    height: 100px;
+}
+
 p {
     text-align: center;
-    color: #b2bec3;
+    color: #a0aaae;
     padding-top: 0 8px;
 }
 
@@ -267,4 +253,11 @@ p {
         margin: auto;
         padding-top: 10%;
     }
+
+    .title a img {
+        width:13vw;
+        height: 13vw;
+        margin-top: -55px;
+    }
+    
 }
